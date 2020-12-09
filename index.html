@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+        <title>Чебоксары</title>
+        <link rel="stylesheet" href="C:\Users\p_aht\OneDrive\Projects\Layout\IT-Fest/style.css">
+        <link rel="stylesheet" href="C:\Users\p_aht\OneDrive\Projects\Layout\IT-Fest/carousel/carousel.css">
+        <link rel="stylesheet" href="C:\Users\p_aht\OneDrive\Projects\Layout\IT-Fest/modal-window/sidebar.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="C:\Users\p_aht\OneDrive\Projects\Layout\IT-Fest\parallax/parallax.js"></script>
+    </head>
+    <body>
+        <div class="header">
+			<div class="container">
+				<div class="header-logo">
+                    <img src="C:\Users\p_aht\OneDrive\Projects\Layout\IT-Fest/img/logo.webp" alt="Чебоксары">
+                </div>
+                <div class="promo">
+                    <span>Чебоксары</span>
+                    <p>город твоих побед!</p>
+                </div>
+                <ul class="main-nav">
+                    <li><a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15}, 250); return location.href = '#close';" class="navbar-item">Информация</a></li>
+                    <li><a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15 + $('.general-information').height() + 50}, 250); return location.href = '#close';" class="navbar-item">Места</a></li>
+                    <li><a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15 + $('.general-information').height() + 50 + $('.carousel-wrapper').height() + $('.places .block-name').height() + 50}, 250); return location.href = '#close';" class="navbar-item">Истории</a></li>
+                    <li><a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15 + $('.general-information').height() + 50 + $('.carousel-wrapper').height() + $('.places .block-name').height() + 50 + $('.developments .block-name').height() + $('.developments-cards').height() + 80}, 250); return location.href = '#close';" class="navbar-item">Инфраструктура</a></li>
+                    <li><a href="#openModal" class="btn-sidebar">&#9776;</i></a></li>
+                 </ul>
+            </div>
+        </div>
+        <div class="preview">
+            <div class="parallax-window" data-parallax="scroll" data-image-src="C:\Users\p_aht\OneDrive\Projects\Layout\IT-Fest/img/background.webp"></div>
+        </div>
+        <div class="general-information">
+            <p class="block-name">Общая информация</p>
+            <hr class="name-underline">
+            <div class="info">
+                <div class="image-info">
+                    <img src="C:\Users\p_aht\OneDrive\Projects\Layout\IT-Fest/img/info.webp" class="first-photo">
+                    <img src="C:\Users\p_aht\OneDrive\Projects\Layout\IT-Fest/img/info-2.webp" class="second-photo">
+                </div>
+                <div class="text-info">
+                    <p align="justify">Чебоксары, Шупашкар — столица Чувашской Республики, ее административный, экономический и культурный центр. В составе Чебоксар три административных района — Калининский, Ленинский, Московский и Заволжское территориальное управление. По данным Чувашстата численность постоянного населения города Чебоксары  на 1 января 2019 года составила 505,8 тыс. человек. Площадь города – 250,9 кв. км. Сосредоточение передовых промышленных и научно-производственных предприятий, квалифицированных трудовых ресурсов, развитой транспортной инфраструктуры, а также наличие инновационного крупного и среднего бизнеса привлекают в столицу Чувашии новых партнеров.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="places">
+                <p class="block-name">Интересные места</p>
+                <hr class="name-underline">
+                <div class="carousel-wrapper">
+                    <span id="item-1"></span>
+                    <span id="item-2"></span>
+                    <span id="item-3"></span>
+                    <div class="carousel-item item-1">
+                      <span>Красная площадь</span>
+                      <p>Общественное пространство на чебоксарском заливе. После реконструкции стало самым посещяемым и красивым местом города Чебоксары, главным ее украшением стал светомузыкальный фонтан, мелодии для которого выбрали жители Чебоксар. </p>
+                      <a class="arrow arrow-prev" href="#item-3"></a>
+                      <a class="arrow arrow-next" href="#item-2"></a>
+                    </div>
+                    
+                    <div class="carousel-item item-2">
+                      <span>Лакреевский лес</span>
+                      <p>Центральный парк культуры и отдыха города Чебоксары. Парк «Лакреевский лес» отличается от других объектов культуры города своим индивидуальным эко-стилем. Площадки отдыха созданы из природных эко-материалов – дерево, камень, цветы.</p>
+                      <a class="arrow arrow-prev" href="#item-1"></a>
+                      <a class="arrow arrow-next" href="#item-3"></a>
+                    </div>
+                    
+                    <div class="carousel-item item-3">
+                      <span>Московская набережная</span>
+                      <p>Московская набережная — точка притяжения туристов и жителей Чебоксар. Набережная растянулась более чем на 5 км вдоль берега Волги: здесь сосредоточены культурные и исторические достопримечательности, площадки для активного и культурного отдыха.</p>
+                      <a class="arrow arrow-prev" href="#item-2"></a>
+                      <a class="arrow arrow-next" href="#item-1"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="developments">
+                <p class="block-name">Городские истории</p>
+                <hr class="name-underline">
+                <div class="developments-cards">
+                    <div class="card">
+                        <img src="img/cards-item-1.webp">
+                        <span>Красную площадь открыли в Чебоксарах после реконструкции к 100-летию Чувашии</span>
+                        <hr class="hr-card">
+                        <p> Власти Чебоксар завершили реконструкцию Красной площади в центре города к 100-летию Чувашии, которое празднуется 24 июня. В среду вечером объект осмотрел врио главы республики Олег Николаев и принял участие в запуске свето-музыкального фонтана, нажав на символическую кнопку...</p>
+                        <div class="btn">
+                            <a class="card-btn" href="#">Подробнее...</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/cards-item-2.webp">
+                        <span>Чебосарам исполнилось 550 лет</span>
+                        <hr class="hr-card">
+                        <p>За 550 лет Чебоксары из небольшого населённого пункта превратились в промышленный и культурный центр Поволжья, центр образования и науки. Сегодня Чебоксары – красивейший город, где гармонично сочетаются старина и современность – как в архитектуре городских построек, так и в народных традициях. Широкие улицы и проспекты, зеленные скверы и парки придают Чебоксарам неповторимый облик...</p>
+                        <div class="btn">
+                            <a class="card-btn" href="#">Подробнее...</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/cards-item-3.webp">
+                        <span>Парк "Амазония" - проект для увеличения туризма в Чебоксарах</span>
+                        <hr class="hr-card">
+                        <p>Проект разработали для увеличения потока туристов в регион. Так, в рамках реализации кластера в сентябре 2017 года «Парк культуры и отдыха имени 500-летия» стал этнокомплексом «Амазония». Авторы проекта обратили внимание на особенности истории и культуры чувашского народа. И стремились воплотить их в новом пространстве...</p>
+                        <div class="btn">
+                            <a class="card-btn" href="#">Подробнее...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infrastructure">
+                <p class="block-name">Инфраструктура</p>
+                <hr class="name-underline">
+                    <div class="map">
+                        <iframe src="https://yandex.ru/map-widget/v1/-/CCUEyMS7lB" width="520" height="360" frameborder="1" allowfullscreen="true" class="frame-map"></iframe>
+                    </div>
+                <div class="description">
+                    <p align="justify"><strong>Официально город делиться на четыре района:</strong> Ленинский, Московский, Калининский, Заволжье. Причем Заволжье находиться на левом берегу реки Волга и представляет собой ряд небольших поселков, турбаз, кордонов и санаториев.</p><p align="justify">Город чистый, благоустроенный, ухоженный. В 2020 году было завершено благоустройство основных общественных мест города чебоксары. Много детских садов и школ, больницы работают исправно, почта никем не занята, мусор вывозится с опережением графика, подъезды моются и ремонтируются своевременно, везде стоят урны, остановочные павильоны выполнены из стекла, на улицах вазоны с цветами и прекрасные клумбы, которые постоянно обновляются. Словом город — мечта и Жемчужина Поволжья.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-page">
+			<div class="container">
+				<div class="footer-top">
+                    <img src="img/logo-reverse.webp" alt="logo">
+                    <div class="promo">
+                        <span>Чебоксары</span>
+                        <p>город твоих побед!</p>
+                    </div>
+					<ul class="main-nav">
+						<li><a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15}, 250); return location.href = '#close';">Информация</a></li>
+                        <li><a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15 + $('.general-information').height() + 50}, 250); return location.href = '#close';">Места</a></li>
+                        <li><a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15 + $('.general-information').height() + 50 + $('.carousel-wrapper').height() + $('.places .block-name').height() + 50}, 250); return location.href = '#close';">Истории</a></li>
+                        <li><a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15 + $('.general-information').height() + 50 + $('.carousel-wrapper').height() + $('.places .block-name').height() + 50 + $('.developments .block-name').height() + $('.developments-cards').height() + 80}, 250); return location.href = '#close';">Инфраструктура</a></li>
+                    </ul>    
+				</div>    
+				<div class="footer-bot">
+					<div class="footer-social">
+                        <a href="https://vk.com/p_ahtimirov" target="_blank">Вконтакте</a>
+                        <a href="https://t.me/p_ahtimirov" target="_blank">Телеграм</a>
+					</div>
+					<p class="info">При перепечатке материалов ссылка на сайт обязательна!<br>Сайт разаработан в рамках онлайн фестиваля "IT-FEST"</p>
+					<div class="footer-copyright">
+                        <p><b>Разработчик -</b> Ахтмиров Пётр</p>
+                        <p><b>Наставник -</b> Антипов Дмитрий</p>
+					</div>
+				</div>
+			</div>
+		</div>
+        <!-- Model-window -->
+        <div id="openModal" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Меню</h3>
+                        <a href="#close" title="Close" class="close">×</a>
+                    </div>
+                    <div class="modal-body">    
+                        <ul class="sidebar-menu">
+                            <a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15}, 250); return location.href = '#close';"><li>Информация</li></a>
+                            <a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15 + $('.general-information').height() + 50}, 250); return location.href = '#close';"><li>Места</li></a>
+                            <a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15 + $('.general-information').height() + 50 + $('.carousel-wrapper').height() + $('.places .block-name').height() + 50}, 250); return location.href = '#close';"><li>Истории</li></a>
+                            <a href="#" onclick="$('body, html').animate({ scrollTop: $('.header').height() + $('.parallax-window').height() + 15 + $('.general-information').height() + 50 + $('.carousel-wrapper').height() + $('.places .block-name').height() + 50 + $('.developments .block-name').height() + $('.developments-cards').height() + 80}, 250); return location.href = '#close';"><li>Инфраструктура</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Model-window -->
+    </body>
+</html>

@@ -1,0 +1,111 @@
+.carousel-wrapper{
+    height:500px;
+    position:relative;
+    width: 100%;
+    margin:0 auto;
+    transition: 0.5s;
+    }
+    .carousel-item {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    padding: 25px 50px;
+    opacity:0;
+    transition: all 0.5s ease-in-out;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+.arrow{
+    border: solid #1968c4;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.arrow:hover {
+box-shadow: #b0bbc7 1px 1px 0, #b0bbc7 2px 2px 0, 
+            #b0bbc7 3px 3px 0, #b0bbc7 4px 4px 0, 
+            #b0bbc7 5px 5px 0;
+}
+
+.arrow-prev{
+left:-30px;
+position:absolute;
+top:50%;
+transform:translateY(-50%) rotate(135deg);
+}
+
+.arrow-next{
+    right:-30px;
+position:absolute;
+top:50%;
+transform:translateY(-50%) rotate(-45deg);
+}
+
+.light{
+color:white;
+}
+
+@media (max-width: 480px) {
+    .arrow, .light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+    }
+    }
+
+/*Select every element*/
+[id^="item"] {
+    display: none;
+}
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+background:url('../img/slider-item-1.webp');
+background-size:cover;
+}
+.item-2{
+background:url('../img/slider-item-2.webp');
+    background-size:cover;
+}
+.item-3{
+background:url('../img/slider-item-3.webp');
+    background-size:cover;
+}
+
+*:target ~ .item-1 {
+    opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+    opacity: 1;
+}
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+}
+
+.carousel-wrapper .carousel-item span{
+    color: white;
+    text-shadow: black 1px 0 10px; 
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.carousel-wrapper .carousel-item p{
+    color: white;
+    text-shadow: black 1px 0 10px;
+    font-size: 1em;
+    margin: 0;
+}
+
+.carousel-wrapper:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
